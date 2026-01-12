@@ -1,0 +1,327 @@
+import streamlit as st
+
+def init_session_state():
+
+    if "questions" not in st.session_state:
+        st.session_state.questions = {
+
+            "Professional Issues in Information System": {
+
+                "easy": [
+                    {"question": "What does GDPR stand for?", "options": ["General Data Protection Regulation", "Global Data Privacy Rule", "General Digital Policy Rule", "Global Database Protection Regulation"], "correct_answer": "General Data Protection Regulation"},
+                    {"question": "Which is an ethical concern in IT?", "options": ["Data Privacy", "Cloud storage", "Coding standards", "Software licensing"], "correct_answer": "Data Privacy"},
+                    {"question": "Which is considered unethical in IT?", "options": ["Secure coding", "Using pirated software", "Licensed tools", "Documentation"], "correct_answer": "Using pirated software"},
+                    {"question": "Why is confidentiality important?", "options": ["Protect sensitive data", "Slow systems", "Reduce storage", "Hide errors"], "correct_answer": "Protect sensitive data"},
+                    {"question": "What is professional accountability?", "options": ["Taking responsibility", "Blaming others", "Ignoring errors", "Avoiding work"], "correct_answer": "Taking responsibility"},
+                    {"question": "What should you do after a security breach?", "options": ["Report it", "Ignore it", "Delete logs", "Share online"], "correct_answer": "Report it"},
+                    {"question": "What law protects personal data?", "options": ["Data Privacy Law", "Traffic Law", "Labor Law", "Criminal Law"], "correct_answer": "Data Privacy Law"},
+                    {"question": "What is responsible technology use?", "options": ["Ethical use", "Password sharing", "Ignoring rules", "Overuse"], "correct_answer": "Ethical use"},
+                    {"question": "Why are ethics important in IT?", "options": ["Build trust", "Delay projects", "Reduce innovation", "Increase cost"], "correct_answer": "Build trust"},
+                    {"question": "What guides moral decisions in IT?", "options": ["Professional ethics", "Profit goals", "Speed", "Hardware"], "correct_answer": "Professional ethics"},
+                ],
+
+                "medium": [
+                    {"question": "What is the purpose of a code of ethics?", "options": ["Guide behavior", "Increase profit", "Limit creativity", "Control updates"], "correct_answer": "Guide behavior"},
+                    {"question": "What is data integrity?", "options": ["Accuracy of data", "Deleting data", "Duplicating data", "Hiding data"], "correct_answer": "Accuracy of data"},
+                    {"question": "What is misuse of information systems?", "options": ["Unauthorized access", "Backup data", "Encrypt files", "Update software"], "correct_answer": "Unauthorized access"},
+                    {"question": "Why avoid sharing passwords?", "options": ["Violates security policy", "Improves teamwork", "Increases speed", "Saves time"], "correct_answer": "Violates security policy"},
+                    {"question": "What does compliance mean?", "options": ["Following laws", "Ignoring rules", "Avoiding audits", "Reducing access"], "correct_answer": "Following laws"},
+                    {"question": "What is least-privilege access?", "options": ["Minimum access needed", "Full access for all", "No access", "Guest access"], "correct_answer": "Minimum access needed"},
+                    {"question": "What is professional negligence?", "options": ["Failing duties", "Documenting work", "Applying patches", "Risk assessment"], "correct_answer": "Failing duties"},
+                    {"question": "What is ethical decision-making?", "options": ["Choosing moral actions", "Ignoring impact", "Focusing on speed", "Avoiding rules"], "correct_answer": "Choosing moral actions"},
+                    {"question": "Why is transparency important?", "options": ["Builds trust", "Slows work", "Reduces security", "Limits access"], "correct_answer": "Builds trust"},
+                    {"question": "What does accountability promote?", "options": ["Responsibility", "Blame shifting", "Negligence", "Avoidance"], "correct_answer": "Responsibility"},
+                ],
+
+                "hard": [
+                    {"question": "Which ethical theory focuses on greatest good?", "options": ["Utilitarianism", "Relativism", "Deontology", "Virtue ethics"], "correct_answer": "Utilitarianism"},
+                    {"question": "What is algorithmic bias?", "options": ["Discrimination by systems", "Optimization", "Data compression", "Speed improvement"], "correct_answer": "Discrimination by systems"},
+                    {"question": "What is the main concern in data mining?", "options": ["User privacy", "System speed", "Hardware", "Latency"], "correct_answer": "User privacy"},
+                    {"question": "What is professional negligence?", "options": ["Ignoring known vulnerabilities", "Documenting code", "Testing systems", "Applying updates"], "correct_answer": "Ignoring known vulnerabilities"},
+                    {"question": "What is ethical responsibility in emerging tech?", "options": ["Assess social impact", "Ignore risks", "Focus on profit", "Avoid regulation"], "correct_answer": "Assess social impact"},
+                    {"question": "What is informed consent?", "options": ["User permission", "Forced agreement", "Hidden terms", "Default access"], "correct_answer": "User permission"},
+                    {"question": "Why is audit important?", "options": ["Detect misconduct", "Increase cost", "Delay work", "Reduce access"], "correct_answer": "Detect misconduct"},
+                    {"question": "What is data manipulation?", "options": ["Altering data to mislead", "Encrypting data", "Backing up", "Formatting"], "correct_answer": "Altering data to mislead"},
+                    {"question": "What is ethical governance?", "options": ["Responsible oversight", "No rules", "Random decisions", "Profit-only focus"], "correct_answer": "Responsible oversight"},
+                    {"question": "Why is trust critical in IS?", "options": ["Ensures user confidence", "Slows systems", "Limits innovation", "Reduces access"], "correct_answer": "Ensures user confidence"},
+                ]
+            },
+            "Individual Sports": {
+
+                "easy": [
+                    {"question": "Which is an individual sport?", "options": ["Tennis", "Basketball", "Volleyball", "Soccer"], "correct_answer": "Tennis"},
+                    {"question": "Which sport uses a racket?", "options": ["Badminton", "Boxing", "Running", "Swimming"], "correct_answer": "Badminton"},
+                    {"question": "Which sport focuses on swimming?", "options": ["Swimming", "Rowing", "Surfing", "Diving"], "correct_answer": "Swimming"},
+                    {"question": "Which sport measures time?", "options": ["Swimming", "Archery", "Gymnastics", "Boxing"], "correct_answer": "Swimming"},
+                    {"question": "Which is NOT an individual sport?", "options": ["Basketball", "Boxing", "Archery", "Tennis"], "correct_answer": "Basketball"},
+                    {"question": "Which uses endurance?", "options": ["Marathon", "Chess", "Darts", "Archery"], "correct_answer": "Marathon"},
+                    {"question": "Which sport uses flexibility?", "options": ["Gymnastics", "Running", "Cycling", "Boxing"], "correct_answer": "Gymnastics"},
+                    {"question": "Which sport uses accuracy?", "options": ["Archery", "Soccer", "Basketball", "Rugby"], "correct_answer": "Archery"},
+                    {"question": "Which sport uses strength?", "options": ["Weightlifting", "Chess", "Darts", "Bowling"], "correct_answer": "Weightlifting"},
+                    {"question": "Which sport is solo?", "options": ["Tennis", "Volleyball", "Soccer", "Basketball"], "correct_answer": "Tennis"},
+                ],
+
+                "medium": [
+                    {"question": "What is most important for consistency?", "options": ["Discipline", "Luck", "Crowd", "Weather"], "correct_answer": "Discipline"},
+                    {"question": "Why is training important?", "options": ["Improve performance", "Waste time", "Cause fatigue", "Reduce skill"], "correct_answer": "Improve performance"},
+                    {"question": "What affects performance most?", "options": ["Personal effort", "Team strategy", "Crowd size", "Noise"], "correct_answer": "Personal effort"},
+                    {"question": "Why is warm-up important?", "options": ["Prevent injury", "Waste energy", "Delay play", "Reduce focus"], "correct_answer": "Prevent injury"},
+                    {"question": "Why is rest needed?", "options": ["Recovery", "Laziness", "Avoid practice", "Reduce strength"], "correct_answer": "Recovery"},
+                    {"question": "What improves endurance?", "options": ["Regular training", "Skipping meals", "Overtraining", "No rest"], "correct_answer": "Regular training"},
+                    {"question": "What improves accuracy?", "options": ["Practice", "Guessing", "Luck", "Speed"], "correct_answer": "Practice"},
+                    {"question": "What builds strength?", "options": ["Resistance training", "Sitting", "Skipping meals", "No rest"], "correct_answer": "Resistance training"},
+                    {"question": "What helps coordination?", "options": ["Skill training", "Random movement", "Fatigue", "Noise"], "correct_answer": "Skill training"},
+                    {"question": "What helps focus?", "options": ["Mental training", "Distraction", "Noise", "Pressure"], "correct_answer": "Mental training"},
+                ],
+
+                "hard": [
+                    {"question": "Why is mental focus critical?", "options": ["Consistency", "Entertainment", "Noise", "Audience"], "correct_answer": "Consistency"},
+                    {"question": "What affects peak performance?", "options": ["Physical & mental readiness", "Luck", "Weather only", "Crowd"], "correct_answer": "Physical & mental readiness"},
+                    {"question": "What is overtraining?", "options": ["Excess training without rest", "Balanced training", "Light practice", "Warm-up"], "correct_answer": "Excess training without rest"},
+                    {"question": "What prevents burnout?", "options": ["Proper recovery", "More training", "Skipping rest", "Ignoring pain"], "correct_answer": "Proper recovery"},
+                    {"question": "What improves competitive mindset?", "options": ["Mental conditioning", "Avoiding pressure", "Ignoring goals", "Luck"], "correct_answer": "Mental conditioning"},
+                    {"question": "What builds resilience?", "options": ["Consistent discipline", "Avoiding failure", "Random effort", "Crowd support"], "correct_answer": "Consistent discipline"},
+                    {"question": "What supports long-term performance?", "options": ["Balanced training", "Overtraining", "No rest", "Short-term focus"], "correct_answer": "Balanced training"},
+                    {"question": "What improves reaction, speed, strength?", "options": ["Integrated training", "Guessing", "Fatigue", "No warm-up"], "correct_answer": "Integrated training"},
+                    {"question": "What role does nutrition play?", "options": ["Supports recovery", "Reduces strength", "No effect", "Slows metabolism"], "correct_answer": "Supports recovery"},
+                    {"question": "What is performance consistency?", "options": ["Stable results", "Random output", "Luck-based", "Crowd effect"], "correct_answer": "Stable results"},
+                ]
+            },
+            "Entrepreneurial Mind": {
+                "easy": [
+                    {"question": "Who is an entrepreneur?", "options": ["Employee", "Business starter", "Customer", "Investor only"], "correct": "Business starter"},
+                    {"question": "What is the main goal of business?", "options": ["Loss", "Profit", "Debt", "Closure"], "correct": "Profit"},
+                    {"question": "Which is a small business?", "options": ["Local bakery", "International bank", "Airline", "Government office"], "correct": "Local bakery"},
+                    {"question": "What do entrepreneurs take?", "options": ["Risks", "Orders", "Vacations", "Penalties"], "correct": "Risks"},
+                    {"question": "What is capital?", "options": ["Money to start business", "Profit", "Debt", "Product"], "correct": "Money to start business"},
+                    {"question": "What is a startup?", "options": ["New business", "Big company", "Charity", "Government agency"], "correct": "New business"},
+                    {"question": "Who manages a business?", "options": ["Entrepreneur", "Customer", "Supplier", "Bank"], "correct": "Entrepreneur"},
+                    {"question": "What helps business grow?", "options": ["Customers", "Losses", "Debt", "Complaints"], "correct": "Customers"},
+                    {"question": "Which involves selling goods?", "options": ["Business", "Hobby", "Sport", "Game"], "correct": "Business"},
+                    {"question": "What is profit?", "options": ["Income minus expenses", "Expenses only", "Loss", "Capital"], "correct": "Income minus expenses"},
+                ],
+                "medium": [
+                    {"question": "What is a business plan?", "options": ["Business guide", "Poster", "Loan", "Punishment"], "correct": "Business guide"},
+                    {"question": "Which trait is important for entrepreneurs?", "options": ["Creativity", "Laziness", "Carelessness", "Dependence"], "correct": "Creativity"},
+                    {"question": "What affects business success?", "options": ["Market demand", "Logo color", "Office size", "Luck only"], "correct": "Market demand"},
+                    {"question": "What does marketing do?", "options": ["Promotes products", "Stops sales", "Creates debt", "Closes business"], "correct": "Promotes products"},
+                    {"question": "What is revenue?", "options": ["Total income", "Total expenses", "Loss", "Capital"], "correct": "Total income"},
+                    {"question": "What is competition?", "options": ["Rival businesses", "Employees", "Customers", "Suppliers"], "correct": "Rival businesses"},
+                    {"question": "What happens if expenses > income?", "options": ["Loss", "Profit", "Break-even", "Growth"], "correct": "Loss"},
+                    {"question": "What is innovation?", "options": ["New ideas", "Copying", "Stopping work", "Delaying"], "correct": "New ideas"},
+                    {"question": "Why study customers?", "options": ["Meet needs", "Ignore feedback", "Reduce sales", "Increase cost"], "correct": "Meet needs"},
+                    {"question": "What is risk management?", "options": ["Handling uncertainty", "Avoiding planning", "Ignoring problems", "Spending more"], "correct": "Handling uncertainty"},
+                ],
+                "hard": [
+                    {"question": "What is entrepreneurial mindset?", "options": ["Opportunity-focused thinking", "Fear of risk", "Fixed thinking", "Avoiding change"], "correct": "Opportunity-focused thinking"},
+                    {"question": "What does break-even mean?", "options": ["No profit, no loss", "High profit", "High loss", "Bankruptcy"], "correct": "No profit, no loss"},
+                    {"question": "What is scalability?", "options": ["Ability to grow", "Closing business", "Reducing staff", "Limiting output"], "correct": "Ability to grow"},
+                    {"question": "What is customer value?", "options": ["Benefit customers receive", "Price only", "Advertising", "Packaging"], "correct": "Benefit customers receive"},
+                    {"question": "What is opportunity cost?", "options": ["Best alternative forgone", "Money spent", "Profit earned", "Risk taken"], "correct": "Best alternative forgone"},
+                    {"question": "Why is cash flow important?", "options": ["Business survival", "Decoration", "Branding", "Competition"], "correct": "Business survival"},
+                    {"question": "What is strategic planning?", "options": ["Long-term planning", "Daily tasks", "Random actions", "Short breaks"], "correct": "Long-term planning"},
+                    {"question": "What causes business failure?", "options": ["Poor management", "Good planning", "Customer focus", "Innovation"], "correct": "Poor management"},
+                    {"question": "What is value proposition?", "options": ["Why customers choose you", "Company name", "Logo design", "Office size"], "correct": "Why customers choose you"},
+                    {"question": "What is sustainability in business?", "options": ["Long-term success", "Quick profit", "Ignoring environment", "Fast closure"], "correct": "Long-term success"},
+                ]
+            },
+            "Purposive Communication": {
+                "easy": [
+                    {"question": "What is communication?", "options": ["Sending messages", "Coding", "Computing", "Drawing"], "correct": "Sending messages"},
+                    {"question": "Which is verbal communication?", "options": ["Speaking", "Gestures", "Posture", "Facial expression"], "correct": "Speaking"},
+                    {"question": "Who sends a message?", "options": ["Sender", "Receiver", "Channel", "Noise"], "correct": "Sender"},
+                    {"question": "Who receives a message?", "options": ["Receiver", "Sender", "Encoder", "Speaker"], "correct": "Receiver"},
+                    {"question": "What blocks communication?", "options": ["Noise", "Clarity", "Feedback", "Understanding"], "correct": "Noise"},
+                    {"question": "Which is non-verbal?", "options": ["Facial expression", "Speech", "Phone call", "Lecture"], "correct": "Facial expression"},
+                    {"question": "Why communicate?", "options": ["Share information", "Confuse people", "Delay work", "Hide ideas"], "correct": "Share information"},
+                    {"question": "What uses written words?", "options": ["Written communication", "Verbal", "Non-verbal", "Visual"], "correct": "Written communication"},
+                    {"question": "What improves understanding?", "options": ["Clarity", "Noise", "Speed", "Silence"], "correct": "Clarity"},
+                    {"question": "What involves listening?", "options": ["Active listening", "Interrupting", "Ignoring", "Shouting"], "correct": "Active listening"},
+                ],
+                "medium": [
+                    {"question": "Why is feedback important?", "options": ["Confirms understanding", "Ends communication", "Creates noise", "Confuses sender"], "correct": "Confirms understanding"},
+                    {"question": "What is effective communication?", "options": ["Clear and understood", "Long messages", "Fast talking", "Complex words"], "correct": "Clear and understood"},
+                    {"question": "What affects communication?", "options": ["Environment", "Color", "Font", "Device"], "correct": "Environment"},
+                    {"question": "What is audience analysis?", "options": ["Understanding listeners", "Ignoring audience", "Writing scripts", "Making noise"], "correct": "Understanding listeners"},
+                    {"question": "What is tone?", "options": ["Attitude of message", "Volume", "Speed", "Channel"], "correct": "Attitude of message"},
+                    {"question": "What is clarity?", "options": ["Ease of understanding", "Length", "Volume", "Speed"], "correct": "Ease of understanding"},
+                    {"question": "What causes misunderstanding?", "options": ["Poor listening", "Feedback", "Focus", "Clarity"], "correct": "Poor listening"},
+                    {"question": "What is persuasion?", "options": ["Influencing others", "Ordering", "Ignoring", "Shouting"], "correct": "Influencing others"},
+                    {"question": "Which helps professional communication?", "options": ["Respect", "Interruptions", "Noise", "Bias"], "correct": "Respect"},
+                    {"question": "What improves presentation?", "options": ["Preparation", "Guessing", "Reading slides", "Rushing"], "correct": "Preparation"},
+                ],
+                "hard": [
+                    {"question": "What is audience-centered communication?", "options": ["Adjusting message to audience", "Ignoring feedback", "Using jargon", "Speaking fast"], "correct": "Adjusting message to audience"},
+                    {"question": "What is intercultural communication?", "options": ["Across cultures", "Within family", "Self-talk", "Written only"], "correct": "Across cultures"},
+                    {"question": "What is communication ethics?", "options": ["Responsible messaging", "Manipulation", "Deception", "Bias"], "correct": "Responsible messaging"},
+                    {"question": "What is decoding?", "options": ["Interpreting message", "Sending message", "Blocking noise", "Encoding"], "correct": "Interpreting message"},
+                    {"question": "Why avoid jargon?", "options": ["Ensure understanding", "Sound smart", "Save time", "Confuse audience"], "correct": "Ensure understanding"},
+                    {"question": "What is assertive communication?", "options": ["Clear and respectful", "Aggressive", "Passive", "Silent"], "correct": "Clear and respectful"},
+                    {"question": "What is empathy?", "options": ["Understanding others’ feelings", "Ignoring emotions", "Arguing", "Commanding"], "correct": "Understanding others’ feelings"},
+                    {"question": "What is persuasion ethics?", "options": ["Honest influence", "Manipulation", "Coercion", "Deception"], "correct": "Honest influence"},
+                    {"question": "What strengthens credibility?", "options": ["Consistency", "Exaggeration", "Bias", "Noise"], "correct": "Consistency"},
+                    {"question": "What improves message retention?", "options": ["Relevance", "Length", "Speed", "Volume"], "correct": "Relevance"},
+                ]
+            },
+            "Organization and Management Concepts": {
+                "easy": [
+                    {"question": "What is an organization?", "options": ["Random group", "Group with common goals", "Computer system", "Government rule"], "correct": "Group with common goals"},
+                    {"question": "Who manages an organization?", "options": ["Managers", "Customers", "Suppliers", "Machines"], "correct": "Managers"},
+                    {"question": "What is management?", "options": ["Achieving goals through people", "Giving orders", "Avoiding planning", "Working alone"], "correct": "Achieving goals through people"},
+                    {"question": "Which is a basic management function?", "options": ["Planning", "Gaming", "Sleeping", "Drawing"], "correct": "Planning"},
+                    {"question": "What does planning involve?", "options": ["Setting goals", "Ignoring future", "Avoiding decisions", "Random actions"], "correct": "Setting goals"},
+                    {"question": "Who leads employees?", "options": ["Manager", "Customer", "Supplier", "System"], "correct": "Manager"},
+                    {"question": "What is organizing?", "options": ["Arranging resources", "Ignoring structure", "Closing office", "Random hiring"], "correct": "Arranging resources"},
+                    {"question": "Which involves motivating people?", "options": ["Leading", "Planning", "Controlling", "Budgeting"], "correct": "Leading"},
+                    {"question": "What is controlling?", "options": ["Monitoring performance", "Giving rewards", "Hiring staff", "Planning tasks"], "correct": "Monitoring performance"},
+                    {"question": "What helps coordination?", "options": ["Clear structure", "Confusion", "No rules", "Silence"], "correct": "Clear structure"},
+                ],
+                "medium": [
+                    {"question": "What is a functional structure?", "options": ["Grouped by function", "Grouped by product", "Random grouping", "Flat structure"], "correct": "Grouped by function"},
+                    {"question": "What is leadership?", "options": ["Influencing people", "Giving commands only", "Avoiding decisions", "Monitoring systems"], "correct": "Influencing people"},
+                    {"question": "Which leadership style involves participation?", "options": ["Democratic", "Autocratic", "Laissez-faire", "Bureaucratic"], "correct": "Democratic"},
+                    {"question": "What is organizational culture?", "options": ["Shared values", "Office building", "Uniform color", "Furniture"], "correct": "Shared values"},
+                    {"question": "What is delegation?", "options": ["Assigning tasks", "Avoiding work", "Micromanaging", "Ignoring staff"], "correct": "Assigning tasks"},
+                    {"question": "What is motivation?", "options": ["Encouraging employees", "Punishing workers", "Ignoring effort", "Reducing pay"], "correct": "Encouraging employees"},
+                    {"question": "What is a matrix structure?", "options": ["Multiple reporting lines", "Single authority", "No manager", "Random teams"], "correct": "Multiple reporting lines"},
+                    {"question": "What does SWOT analysis identify?", "options": ["Strengths and weaknesses", "Employees only", "Profits only", "Products only"], "correct": "Strengths and weaknesses"},
+                    {"question": "Why is communication important in management?", "options": ["Coordination", "Confusion", "Delay", "Control only"], "correct": "Coordination"},
+                    {"question": "What is performance appraisal?", "options": ["Evaluating employees", "Hiring staff", "Training only", "Firing"], "correct": "Evaluating employees"},
+                ],
+                "hard": [
+                    {"question": "What is strategic management?", "options": ["Long-term planning", "Daily supervision", "Short-term tasks", "Routine control"], "correct": "Long-term planning"},
+                    {"question": "What is contingency theory?", "options": ["Depends on situation", "One best way", "No management", "Fixed structure"], "correct": "Depends on situation"},
+                    {"question": "What is transformational leadership?", "options": ["Inspiring change", "Strict control", "Reward-only", "Hands-off"], "correct": "Inspiring change"},
+                    {"question": "What is decision-making?", "options": ["Choosing alternatives", "Ignoring options", "Guessing", "Avoiding action"], "correct": "Choosing alternatives"},
+                    {"question": "Why is change management important?", "options": ["Adapt to environment", "Avoid planning", "Increase confusion", "Stop growth"], "correct": "Adapt to environment"},
+                    {"question": "What is organizational effectiveness?", "options": ["Goal achievement", "Profit only", "Employee count", "Office size"], "correct": "Goal achievement"},
+                    {"question": "What is authority?", "options": ["Right to command", "Skill only", "Friendship", "Influence only"], "correct": "Right to command"},
+                    {"question": "What is centralization?", "options": ["Decision at top", "Employee freedom", "Team autonomy", "No control"], "correct": "Decision at top"},
+                    {"question": "What is decentralization?", "options": ["Delegating authority", "Top control", "No structure", "Confusion"], "correct": "Delegating authority"},
+                    {"question": "What is organizational development?", "options": ["Planned change", "Random change", "Downsizing only", "Automation only"], "correct": "Planned change"},
+                ]
+            },
+            "IT Infrastructure": {
+                "easy": [
+                    {"question": "What is IT infrastructure?", "options": ["Technology resources", "Company rules", "Employees", "Strategy"], "correct": "Technology resources"},
+                    {"question": "Which is hardware?", "options": ["Printer", "Software", "Policy", "Data"], "correct": "Printer"},
+                    {"question": "Which is software?", "options": ["Operating system", "Monitor", "Mouse", "Keyboard"], "correct": "Operating system"},
+                    {"question": "What connects computers?", "options": ["Network", "CPU", "RAM", "Storage"], "correct": "Network"},
+                    {"question": "What stores data?", "options": ["Hard drive", "Monitor", "Keyboard", "Mouse"], "correct": "Hard drive"},
+                    {"question": "Which device routes data?", "options": ["Router", "Switch", "Printer", "Scanner"], "correct": "Router"},
+                    {"question": "What provides internet access?", "options": ["Modem", "CPU", "RAM", "GPU"], "correct": "Modem"},
+                    {"question": "What is a server?", "options": ["Provides services", "Personal computer", "Printer", "Tablet"], "correct": "Provides services"},
+                    {"question": "What is a firewall?", "options": ["Security device", "Storage unit", "Router", "Switch"], "correct": "Security device"},
+                    {"question": "What is LAN?", "options": ["Local network", "Global network", "Internet", "Satellite"], "correct": "Local network"},
+                ],
+                "medium": [
+                    {"question": "What does a switch do?", "options": ["Connect devices", "Store files", "Block attacks", "Run software"], "correct": "Connect devices"},
+                    {"question": "What does cloud computing allow?", "options": ["Online storage", "Offline work only", "No access", "Manual backup"], "correct": "Online storage"},
+                    {"question": "What is network security?", "options": ["Protecting data", "Increasing speed", "Designing UI", "Formatting PCs"], "correct": "Protecting data"},
+                    {"question": "What is redundancy?", "options": ["Backup systems", "Single device", "No backup", "Extra cost"], "correct": "Backup systems"},
+                    {"question": "What does an IP address identify?", "options": ["Device on network", "WiFi password", "File name", "User role"], "correct": "Device on network"},
+                    {"question": "What is bandwidth?", "options": ["Data capacity", "Security level", "Storage size", "CPU speed"], "correct": "Data capacity"},
+                    {"question": "What is a WAN?", "options": ["Wide network", "Local network", "Private network", "Personal network"], "correct": "Wide network"},
+                    {"question": "What is virtualization?", "options": ["Running multiple OS", "Deleting hardware", "Replacing servers", "Slowing systems"], "correct": "Running multiple OS"},
+                    {"question": "What does DNS do?", "options": ["Translate domain names", "Store data", "Block attacks", "Route traffic"], "correct": "Translate domain names"},
+                    {"question": "Why are updates important?", "options": ["Security fixes", "Design change", "Speed only", "UI"], "correct": "Security fixes"},
+                ],
+                "hard": [
+                    {"question": "What ensures high availability?", "options": ["Redundancy", "Single server", "Manual backup", "Low bandwidth"], "correct": "Redundancy"},
+                    {"question": "What is network latency?", "options": ["Delay in data transfer", "Security level", "Storage size", "IP address"], "correct": "Delay in data transfer"},
+                    {"question": "What is disaster recovery?", "options": ["System restoration", "System shutdown", "Hardware removal", "Security breach"], "correct": "System restoration"},
+                    {"question": "What is load balancing?", "options": ["Distributing traffic", "Blocking users", "Increasing storage", "Reducing access"], "correct": "Distributing traffic"},
+                    {"question": "What is encryption?", "options": ["Securing data", "Deleting data", "Compressing files", "Backing up"], "correct": "Securing data"},
+                    {"question": "What is scalability?", "options": ["Ability to handle growth", "System slowdown", "Fixed capacity", "Manual upgrade"], "correct": "Ability to handle growth"},
+                    {"question": "What is zero trust?", "options": ["Verify every access", "Trust all users", "Open access", "Public network"], "correct": "Verify every access"},
+                    {"question": "What is intrusion detection?", "options": ["Detecting attacks", "Blocking internet", "Storing logs", "Designing UI"], "correct": "Detecting attacks"},
+                    {"question": "What is network topology?", "options": ["Network layout", "Security policy", "Speed", "Hardware brand"], "correct": "Network layout"},
+                    {"question": "Why is monitoring important?", "options": ["Detect issues early", "Increase cost", "Reduce access", "Slow system"], "correct": "Detect issues early"},
+                ]
+            },
+            "Mathematics in the Modern World": {
+                "easy": [
+                    {"question": "What is mathematics used for?", "options": ["Problem solving", "Guessing", "Decoration", "Entertainment"], "correct": "Problem solving"},
+                    {"question": "What involves counting?", "options": ["Arithmetic", "Geometry", "Calculus", "Logic"], "correct": "Arithmetic"},
+                    {"question": "Which uses numbers?", "options": ["Math", "Art", "Music", "Dance"], "correct": "Math"},
+                    {"question": "What is data?", "options": ["Information", "Opinion", "Guess", "Story"], "correct": "Information"},
+                    {"question": "What shows relationships?", "options": ["Graph", "Sentence", "Picture", "Song"], "correct": "Graph"},
+                    {"question": "Which involves chance?", "options": ["Probability", "Counting", "Sorting", "Drawing"], "correct": "Probability"},
+                    {"question": "What is statistics?", "options": ["Data study", "Number guessing", "Equation writing", "Drawing"], "correct": "Data study"},
+                    {"question": "What uses formulas?", "options": ["Math", "Art", "Music", "Dance"], "correct": "Math"},
+                    {"question": "Which helps decision-making?", "options": ["Statistics", "Guessing", "Opinion", "Luck"], "correct": "Statistics"},
+                    {"question": "What helps prediction?", "options": ["Probability", "Drawing", "Writing", "Singing"], "correct": "Probability"},
+                ],
+                "medium": [
+                    {"question": "What is mathematical modeling?", "options": ["Representing real situations", "Drawing", "Writing stories", "Guessing"], "correct": "Representing real situations"},
+                    {"question": "What does statistics analyze?", "options": ["Data", "Colors", "Words", "Sounds"], "correct": "Data"},
+                    {"question": "What is a sequence?", "options": ["Ordered numbers", "Random list", "Graph", "Shape"], "correct": "Ordered numbers"},
+                    {"question": "Why use graphs?", "options": ["Visualize data", "Decorate", "Confuse", "Hide data"], "correct": "Visualize data"},
+                    {"question": "What is probability range?", "options": ["0 to 1", "1 to 10", "0 to 100", "Any number"], "correct": "0 to 1"},
+                    {"question": "What does mean represent?", "options": ["Average", "Highest value", "Lowest value", "Range"], "correct": "Average"},
+                    {"question": "What is applied math?", "options": ["Real-life problem solving", "Pure theory", "Guessing", "Art"], "correct": "Real-life problem solving"},
+                    {"question": "What is data interpretation?", "options": ["Making sense of data", "Collecting data", "Deleting data", "Hiding data"], "correct": "Making sense of data"},
+                    {"question": "What is correlation?", "options": ["Relationship between variables", "Exact cause", "Randomness", "Graph type"], "correct": "Relationship between variables"},
+                    {"question": "Why is math important in tech?", "options": ["Logic and computation", "Decoration", "Music", "Writing"], "correct": "Logic and computation"},
+                ],
+                "hard": [
+                    {"question": "What is standard deviation?", "options": ["Measure of spread", "Average", "Maximum value", "Minimum value"], "correct": "Measure of spread"},
+                    {"question": "What is exponential growth?", "options": ["Rapid increase", "Constant change", "Decrease", "Random growth"], "correct": "Rapid increase"},
+                    {"question": "What does probability measure?", "options": ["Likelihood of event", "Event value", "Data size", "Sample size"], "correct": "Likelihood of event"},
+                    {"question": "What is regression analysis?", "options": ["Predicting relationships", "Sorting data", "Counting", "Drawing"], "correct": "Predicting relationships"},
+                    {"question": "What is big data?", "options": ["Large datasets", "Small samples", "Graphs", "Tables"], "correct": "Large datasets"},
+                    {"question": "What does variance show?", "options": ["Data spread", "Average", "Median", "Mode"], "correct": "Data spread"},
+                    {"question": "What is sampling?", "options": ["Selecting data subset", "Collecting all data", "Deleting data", "Guessing"], "correct": "Selecting data subset"},
+                    {"question": "What is forecasting?", "options": ["Predicting future values", "Recording past data", "Guessing", "Estimating errors"], "correct": "Predicting future values"},
+                    {"question": "What is mathematical optimization?", "options": ["Best solution", "Random choice", "Worst case", "Trial only"], "correct": "Best solution"},
+                    {"question": "What is risk analysis?", "options": ["Assessing uncertainty", "Avoiding math", "Guessing outcomes", "Ignoring data"], "correct": "Assessing uncertainty"},
+                ]
+            },
+            "Data Structures and Algorithms": {
+                "easy": [
+                    {"question": "What is a data structure?", "options": ["Way to organize data", "Programming language", "Hardware", "Network"], "correct": "Way to organize data"},
+                    {"question": "Which stores data sequentially?", "options": ["Array", "Tree", "Graph", "Heap"], "correct": "Array"},
+                    {"question": "Which follows FIFO?", "options": ["Queue", "Stack", "Tree", "Graph"], "correct": "Queue"},
+                    {"question": "Which follows LIFO?", "options": ["Stack", "Queue", "Array", "Graph"], "correct": "Stack"},
+                    {"question": "What is an algorithm?", "options": ["Step-by-step solution", "Data type", "Variable", "Loop"], "correct": "Step-by-step solution"},
+                    {"question": "Which is linear?", "options": ["Array", "Tree", "Graph", "Heap"], "correct": "Array"},
+                    {"question": "What stores key-value pairs?", "options": ["Dictionary", "Array", "Stack", "Queue"], "correct": "Dictionary"},
+                    {"question": "What is searching?", "options": ["Finding data", "Deleting data", "Sorting data", "Copying data"], "correct": "Finding data"},
+                    {"question": "What is sorting?", "options": ["Arranging data", "Deleting data", "Searching data", "Encrypting"], "correct": "Arranging data"},
+                    {"question": "What is a list?", "options": ["Collection of items", "Single value", "Program", "Function"], "correct": "Collection of items"},
+                ],
+                "medium": [
+                    {"question": "What is time complexity?", "options": ["Algorithm efficiency", "Code color", "Memory size", "CPU speed"], "correct": "Algorithm efficiency"},
+                    {"question": "What is binary search?", "options": ["Search in sorted list", "Search in random list", "Linear scan", "Tree traversal"], "correct": "Search in sorted list"},
+                    {"question": "Which structure is hierarchical?", "options": ["Tree", "Array", "Stack", "Queue"], "correct": "Tree"},
+                    {"question": "What is recursion?", "options": ["Function calling itself", "Loop only", "Condition", "Variable"], "correct": "Function calling itself"},
+                    {"question": "What is space complexity?", "options": ["Memory usage", "Time usage", "Speed", "Size of code"], "correct": "Memory usage"},
+                    {"question": "What is traversal?", "options": ["Visiting elements", "Deleting nodes", "Sorting data", "Encrypting"], "correct": "Visiting elements"},
+                    {"question": "What is linked list?", "options": ["Nodes with pointers", "Fixed array", "Tree", "Stack"], "correct": "Nodes with pointers"},
+                    {"question": "What is hashing?", "options": ["Mapping keys", "Sorting data", "Searching linearly", "Encrypting"], "correct": "Mapping keys"},
+                    {"question": "Which is faster on average?", "options": ["Binary search", "Linear search", "Random search", "Manual search"], "correct": "Binary search"},
+                    {"question": "What is a queue used for?", "options": ["Order processing", "Undo actions", "Recursion", "Sorting"], "correct": "Order processing"},
+                ],
+                "hard": [
+                    {"question": "What is Big-O notation?", "options": ["Growth rate", "Exact runtime", "Memory size", "Code length"], "correct": "Growth rate"},
+                    {"question": "What is worst-case analysis?", "options": ["Maximum time", "Minimum time", "Average time", "Random"], "correct": "Maximum time"},
+                    {"question": "What is balanced tree?", "options": ["Height minimized", "Unsorted", "Random", "Skewed"], "correct": "Height minimized"},
+                    {"question": "What is depth-first search?", "options": ["Explore deep paths", "Explore neighbors first", "Random search", "Linear scan"], "correct": "Explore deep paths"},
+                    {"question": "What is breadth-first search?", "options": ["Explore level by level", "Explore deep paths", "Random", "Recursive"], "correct": "Explore level by level"},
+                    {"question": "What is dynamic programming?", "options": ["Store sub-results", "Random coding", "Trial and error", "Hard coding"], "correct": "Store sub-results"},
+                    {"question": "What is greedy algorithm?", "options": ["Local optimal choice", "Global search", "Random", "Recursive"], "correct": "Local optimal choice"},
+                    {"question": "What causes stack overflow?", "options": ["Deep recursion", "Large arrays", "Sorting", "Searching"], "correct": "Deep recursion"},
+                    {"question": "What is graph traversal?", "options": ["Visiting nodes", "Deleting edges", "Sorting vertices", "Encrypting"], "correct": "Visiting nodes"},
+                    {"question": "Why analyze algorithms?", "options": ["Efficiency comparison", "Decoration", "Style", "Syntax"], "correct": "Efficiency comparison"},
+                ]
+            }
+        }
+
+    if "students" not in st.session_state:
+        st.session_state.students = []
+
+    if "quiz_history" not in st.session_state:
+        st.session_state.quiz_history = []
+
+    if "current_quiz" not in st.session_state:
+        st.session_state.current_quiz = None
